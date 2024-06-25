@@ -1,0 +1,69 @@
+:root {
+  --pink: #ffd8d8;
+}
+
+html {
+  background-color: var(--pink);
+  font-family: Quicksand, sans-serif;
+}
+
+nav {
+  background-color:lavenderblush;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  justify-content:space-evenly;
+  border-radius: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: lightcoral;
+  &:hover {
+    color: #a95c5c;
+  }
+  &.currentPage {
+    text-decoration: underline;
+  }
+}
+
+.wrapper {
+  display: flow-root;
+  margin: 2rem;
+  width: 80%;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 8rem;
+}
+
+
+p.erklärung {
+  text-align: start;
+  font-size: 1rem;
+  margin-block-end: 3rem;
+}
+
+.quellen {
+  font-size: 1rem;
+  margin-block-start: 3rem;
+}
+
+a {
+  color: lightcoral;
+  &:hover {
+    color: #a95c5c;
+  }
+}
+

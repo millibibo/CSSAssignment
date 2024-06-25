@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/task1.css">
+  <meta name="description" content="Abgabe CSS">
+
+</head>
+
+<header>
+  <nav>
+    <a href="index.html" class="currentPage">Task 1</a>
+    <a href="task2.html">Task 2</a>
+  </nav>
+</header>
+
+<body>
+<div class="wrapper">
+  <h1>FRONTEND ENGINEERING ASSIGNMENT 3: CSS</h1>
+
+  <section>
+    <h2>1.1) :has(:not())</h2>
+    <p class="erklärung">:has(:not()) wird verwendet, wenn man etwas stylen möchte, was auf einer ausschließlichen
+      Unterscheidung beruht. In meinem Beispiel gibt es zwei verschiedene Arten von
+    Karten, einmal mit Bild (img Tag) und Text (p Tag) und einmal nur mit Text (p Tag)
+    Die Karten die mehr als nur einen Text enthalten werden anders gestyled (hier z.B ohne Hintergrund).</p>
+    <p class="erklärung">:has() ist seit Dezember 2023 laut Baseline für alle wichtigen Geräte und Browser (die Baseline untersucht - Chrome, Edge,
+      Firefox, Safari) kompatibel. Auch Interop hat :has() im letzten Jahr als 100% kompatibel mit eben genannten Browsern eingestuft. Außerdem haben
+      sie experimentell auch Chrome Dev, Edge Dev, Firefox Nightly und Safari Technology Preview untersucht und als 100% kompatibel eingeordnet.
+      :not() dagegen ist nicht Baseline gesichert. Es scheint allerdings mit den vier großen Browsern seit einigen Jahren kompatibel zu sein. Interop
+      hat sich :not() noch nicht angeschaut, sodass hier keine Aussage getroffen werden kann. Während :has() ohne Probleme auch in Produktion
+      verwendet werden kann, sollte :not() mit etwas mehr Vorsicht genossen werden, und somit auch die Kombination beider Selektoren. Besonders auch
+      weil es keinerlei Informationen zur Kombination bei Baseline sowie Interop gibt. Als Fallback Lösung (besonders bei Teil 2
+      kann eine entsprechende Umsetzung der Logik in JavaScript erfolgen. Eine andere Möglichkeit wäre, die von vorneherein andere properties
+      zum stylen verwenden, also für jede Art der Kästen zum Beispiel einen eigenen Style. (Erklärung gilt für Teil 1 und 2 der Aufgabe)</p>
+    <div class="task1">
+      <div class="card">
+        <img src="./img/rabbit-2218452_640.jpg" alt="Kaninchen">
+        <p class="imgText"> Bild 1 </p>
+      </div>
+      <div class="card">
+        <p class="cardText">Süßes Kaninchen</p>
+        <p class="imgText">Kaninchen gehören zur Familie der Hasenartigen und sind Säugetiere. Mit den Nagetieren sind sie übrigens nicht verwandt.</p>
+      </div>
+      <div class="card">
+        <img src="./img/rabbit-4442997_640.jpg" alt="Kaninchen">
+        <p class="imgText"> Bild 2 </p>
+      </div>
+      <div class="card">
+        <p class="cardText">Süßes Kaninchen</p>
+        <p class="imgText">Kaninchen sind ziemlich klein: Vom Kopf bis zum Po werden sie 34 bis 45 Zentimeter lang, 16 bis 18 Zentimeter hoch und ein bis maximal drei Kilogramm schwer.</p>
+      </div>
+      <div class="card">
+        <img src="./img/rabbits-5363546_640.jpg" alt="Kaninchen">
+        <p class="imgText"> Bild 3 </p>
+      </div>
+      <div class="card">
+        <p class="cardText">Süßes Kaninchen</p>
+        <p class="imgText">Ihre Ohren sind sechs bis 7,5 Zentimeter lang und immer aufgerichtet. Typisch für Kaninchen ist, dass der obere Rand der Ohren schwarz ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>1.2) :not(:has())</h2>
+    <p class="erklärung">In diesem Fall wird etwas besonders gestyled, dass etwas nicht hat. In meinem Beispiel
+    gibt es drei Text Inputfelder, die in einem äußeren Element liegen. Ist das Inputfeld nicht gefüllt (hat also keinen
+    value gesetzt), dann ist das äußere Element rot. Es wechselt auf grün, falls ein value gesetzt wird. Das
+    Setzen des values geht über js, das styling kann nun aber in css gemacht werden.</p>
+    <div class="task12">
+      <div class="formular">
+        <h3 class="formHeader"> Aufgabe 1</h3>
+        <input type="text" id="eins" placeholder="Name" value="Aufgabe 1 Lösung">
+        <p class="check"> Alles ausgefüllt!</p>
+      </div>
+      <div class="formular">
+        <h3 class="formHeader"> Aufgabe 2</h3>
+        <input type="text" id="zwei" placeholder="Name">
+        <p class="check"> Alles ausgefüllt!</p>
+      </div>
+      <div class="formular">
+        <h3 class="formHeader"> Aufgabe 3</h3>
+        <input type="text" id="drei" placeholder="Name">
+        <p class="check"> Alles ausgefüllt!</p>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+
+
+    <div class="quellen">
+      <p class="quelle">Quellen:</p>
+      <p class="quelle"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has">https://developer.mozilla.org/en-US/docs/Web/CSS/:has</a></p>
+      <p class="quelle"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:not">https://developer.mozilla.org/en-US/docs/Web/CSS/:not</a></p>
+      <p class="quelle"><a href="https://wpt.fyi/interop-2023">https://wpt.fyi/interop-2023</a></p>
+      <p class="quelle"><a href="https://caniuse.com/?search=%3Anot()">https://caniuse.com/?search=%3Anot()</a></p>
+      <p class="quelle"><a href="https://caniuse.com/?search=%3Ahas()">https://caniuse.com/?search=%3Ahas()</a></p>
+      <p class="quelle"><a href="https://www.matuzo.at/blog/2022/100daysof-day50/">https://www.matuzo.at/blog/2022/100daysof-day50/</a></p>
+    </div>
+  </section>
+
+
+
+</div>
+
+</body>
+
+</html>

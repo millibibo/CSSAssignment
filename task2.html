@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/task2.css">
+  <meta name="description" content="Abgabe CSS">
+
+</head>
+
+<header>
+  <nav>
+    <a href="index.html">Task 1</a>
+    <a href="task2.html" class="currentPage">Task 2</a>
+  </nav>
+</header>
+
+<body>
+<div class="wrapper">
+  <h1>FRONTEND ENGINEERING ASSIGNMENT 3: CSS</h1>
+
+
+
+  <section>
+    <h2>2) Container Queries and Grid</h2>
+
+    <p class="erklärung">Hier ist eine Übersichtsseite für Rezepte zu sehen. Ein besonderes Gericht (z.B. Gericht des Tages) wird
+    oben in groß angezeigt. Darunter folgen weitere Gericht, immer vier in einer Reihe. Alle haben ein Bild, einen Titel und einen Button,
+      mit dem man zum richtigen Rezept kommt. Das Ganze ist in einem Gridlayout angeordnet, wobei das erste Gericht über alle vier Spalten angezeigt wird.
+    Außerdem ist das oberste Gericht mit ContainerQueries gestaltet. Ist genug Platz auf dem Bildschirm, so wird das Bild links über zwei Spalten
+    angezeigt und rechts daneben der Titel und noch ein Text. Außerdem ist der Button größer. Ist weniger Platz vorhanden, so nimmt auch das Rezept
+    den Style von den anderen Elementen an.</p>
+    <p class="erklärung">ContainerQueries sind noch nicht mit allen Browsern zu 100% kompatibel. Firefox zum Beispiel hat sie laut Can I Use noch gar nicht implementiert.
+      Dort ist auch Baseline nur mit Limited availability angegeben. Auch auf dem Interop Dashboard gibt es keine Informationen zu ContainerQueries, auch
+      auf dem 2024 Dashboard stehen sie nicht. Damit sollten Container Queries noch nicht in Produktion verwendet werden. Eine Falllback Lösung wäre
+      auch wieder mehrere Styles zu definieren und das große Layout dann über die Media screen Queries zu steuern.
+    </p>
+    <h2>Rezepte</h2>
+
+      <main class="grid">
+        <div class="rezept featured">
+          <img src="./img/food1.jpg" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Nudeln mit Schinkensoße</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+          <button class="button">More</button>
+        </div>
+
+        <div class="rezept">
+          <img src="./img/food2.jpg" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Mexikanische Wraps</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+          <button class="button">More</button>
+        </div>
+
+        <div class="rezept">
+          <img src="./img/food3.jpg" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Gemüseteller mit Tofu</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+          <button class="button">More</button>
+        </div>
+
+        <div class="rezept">
+          <img src="./img/food4.jpeg" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Omlette mit mediteraner Gemüsefüllung</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+          <button class="button">More</button>
+        </div>
+
+        <div class="rezept">
+          <img src="./img/food5.avif" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Nudeln mit Gemüse</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+          <button class="button">More</button>
+        </div>
+
+        <div class="rezept">
+          <img src="./img/food7.jpeg" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Spaghetti mit Walnusssoße</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+          <button class="button">More</button>
+        </div>
+
+
+        <div class="rezept">
+          <img src="./img/food8.jpg" alt="Food">
+          <div class="rezeptText">
+            <h3 class="rezeptTitel">Gegrilltes mit Ofengemüse</h3>
+            <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+          <button class="button">More</button>
+          <p class="anweisung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+
+      </main>
+    <div class="quellen">
+      <p class="quelle">Quellen:</p>
+      <p class="quelle"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries</a></p>
+      <p class="quelle"><a href="https://caniuse.com/?search=container%20queries">https://caniuse.com/?search=container%20queries</a></p>
+      <p class="quelle"><a href="https://wpt.fyi/interop-2024?stable">https://wpt.fyi/interop-2024?stable</a></p>
+      <p class="quelle"><a href="https://www.youtube.com/watch?v=Zddz_R1RnfM&t=1066s">https://www.youtube.com/watch?v=Zddz_R1RnfM&t=1066s</a></p>
+    </div>
+  </section>
+
+
+
+</div>
+
+</body>
+</html>

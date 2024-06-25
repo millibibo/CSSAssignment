@@ -1,0 +1,90 @@
+.task1 {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  block-size: 20rem;
+  inline-size: 30rem;
+  border: lightcoral 3px solid;
+  background-color: lightcoral;
+  border-radius: 5rem;
+  text-align: center;
+}
+
+img {
+  padding-block-start: 1rem;
+  block-size: 80%;
+  inline-size: 80%;
+  border-radius: 5rem;
+}
+
+p.cardText{
+  font-size: 2rem;
+  text-align: center;
+  padding-block-start: 2rem;
+}
+
+p.imgText{
+  padding: 0 3rem 0 3rem;
+  font-size: 1rem;
+}
+
+.card:has(:not(p)) {
+  background-color: transparent;
+}
+
+
+
+.wrapper {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.task12 {
+  display: block;
+}
+
+input {
+  margin: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  width: 100%;
+}
+
+.formular {
+  background-color: lightcoral;
+  margin-block: 3rem;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.formHeader {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.check {
+  font-size: 1rem;
+}
+
+.formular:has(input[value]) {
+  background-color: lightgreen;
+}
+
+.formular:not(:has(input[value])) {
+   background-color: #723535;
+  & p {
+    display: none;
+  }
+}
+
+
+
+
+
